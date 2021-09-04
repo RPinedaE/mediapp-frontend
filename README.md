@@ -1,27 +1,16 @@
 # MediappFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+Evaluación final para la obtención del Certificado de Aprobación Proyecto - Parte FrontEnd
 
-## Development server
+## EVALUACION TIPO A
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Sobre la base del proyecto “mediapp-frontend” del módulo 9 del curso, se logró implementar los siguientes puntos solicitados en la evaluación: 
 
-## Code scaffolding
+•	Se creó un componente “perfil” para mostrar el nombre de usuario y su rol.
+•	Se creó un CRUD del componente “Signos” en Angular, similar al componente “Paciente” visto en el curso. 
+•	Los datos temperatura, pulso, ritmo son STRING.
+•	Se usó el componente ‘mat-select’ para listar los pacientes.
+•	Se implementó el Reto del Nuevo paciente usando el componente MatDialogRef
+•	Sólo se muestra un componente a la vez, o el listado o el de edición en Signos Vitales.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
