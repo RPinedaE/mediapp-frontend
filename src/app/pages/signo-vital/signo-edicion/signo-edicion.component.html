@@ -1,0 +1,58 @@
+<form class="example-container" [formGroup]="form" (ngSubmit)="operar()" #espForm="ngForm">
+
+    <div [hidden]="true">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="ID" required formControlName="id">
+        </mat-form-field>
+    </div>
+
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="3.5%" >     
+        <mat-form-field class="example-full-width" fxFlex="75%"> 
+            <mat-select placeholder="Paciente" [(value)]="idPacienteSeleccionado" required>
+                <mat-option *ngFor="let p of (pacientes$ | async)" [value]="p.idPaciente">
+                    {{p.nombres}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div>
+            <button mat-raised-button color="primary" type="button" (click)="nuevoPacienteDialogo()">
+                <mat-icon>add</mat-icon>
+                <span>Nuevo Paciente</span>
+            </button>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="3.5%">     
+        <mat-form-field class="example-full-width" fxFlex="75%">
+            <input matInput [matDatepicker]="picker" [max]="maxFecha" placeholder="Fecha" formControlName="fecha" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>       
+    </div>
+
+    <!--https://www.linkedin.com/pulse/angular-5-reactive-forms-dynamic-rows-validation-value-sobinovsky-->
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Temperatura" required formControlName="temperatura">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Pulso" required formControlName="pulso">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Rutmo Cardiaco" required formControlName="ritmo">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="espForm.invalid">
+        <mat-icon>done</mat-icon>
+        <span>Aceptar</span>
+    </button>
+    <button mat-raised-button color="accent"  type="button" routerLink='/pages/signo-vital' >
+        <mat-icon>close</mat-icon>
+        <span>Cancelar</span>
+    </button>
+</form>
+
+<br />

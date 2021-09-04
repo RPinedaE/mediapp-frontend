@@ -1,0 +1,8 @@
+.example-card {
+    max-width: 300px;  
+  }
+  
+  .example-header-image {
+    background-image: url('https://www.clipartmax.com/png/middle/205-2050330_user-icon-user-icon-ico.png'); 
+    background-size: cover;
+  }
